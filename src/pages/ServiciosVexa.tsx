@@ -83,7 +83,7 @@ export function ServiciosVexa() {
           >
             <div className="mb-4 text-emerald-400">{servicio.icon}</div>
             <h3 className="mb-2 text-xl font-bold text-white">{servicio.title}</h3>
-            <p className="text-gray-300">{servicio.description}</p>
+            <p className="text-gray-400">{servicio.description}</p>
 
             <div className="absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r from-emerald-400 to-emerald-600 transition-all duration-300 group-hover:w-full" />
           </motion.div>

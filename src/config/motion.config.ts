@@ -103,15 +103,15 @@ export const fadeIn = {
   };
   
   // Botones (hover/press)
-  export const buttonHover = {
-    whileHover: {
-      scale: 1.05,
-      transition: { type: "spring", stiffness: 300 },
-    },
-    whileTap: {
-      scale: 0.97,
-    },
-  };
+  // export const buttonHover = {
+  //   whileHover: {
+  //     scale: 1.05,
+  //     transition: { type: "spring", stiffness: 300 },
+  //   },
+  //   whileTap: {
+  //     scale: 0.97,
+  //   },
+  // };
   
   // Íconos
   export const iconPulse = {
@@ -121,3 +121,13 @@ export const fadeIn = {
     },
   };
   
+  export const buttonHover = {
+    whileHover: {
+      scale: 1.05,
+      boxShadow: "0 0 12px rgba(16,185,129,0.5)",
+      transition: { type: "spring", stiffness: 300 },
+    },
+    whileTap: {
+      scale: 0.95,
+    },
+  };

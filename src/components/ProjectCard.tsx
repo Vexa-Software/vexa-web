@@ -2,6 +2,8 @@ import { useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, Monitor, Smartphone } from "lucide-react";
 import { fadeInUp, slideInLeft, slideInRight } from "../config/motion.config";
+import FancyButton from "../components/buttons/FancyButton";
+import CustomButton17 from "../components/buttons/CustomButton17";
 
 interface ProjectProps {
   title: string;
@@ -129,19 +131,25 @@ export const ProjectCard = ({
 
           <div>
             <p className="text-sm text-white font-semibold mb-2 mt-4">Resultados</p>
-            <ul className="list-disc pl-5 text-gray-300 text-sm space-y-1">
+            <ul className="list-disc pl-5 text-gray-300 text-sm space-y-1 mb-8">
               {results.map((r, i) => (
                 <li key={i}>{r}</li>
               ))}
             </ul>
           </div>
+          <CustomButton17
+            text="Visitar sitio"
+            href= {website}
+            bgColor="#262626"
+            textColor="#10b981"
+            borderColor="none"
+            hoverBgColor="#10b981"
+            hoverTextColor="text-black"
+            hoverBorderColor="#10b981"
+            padding="0.4rem 2rem"
+          />
 
-          <a
-            href={website}
-            className="inline-flex items-center gap-2 mt-6 rounded-md bg-emerald-500 px-4 py-2 text-sm font-semibold text-black hover:bg-emerald-400 transition"
-          >
-            Visitar Sitio <ArrowRight className="w-4 h-4" />
-          </a>
+
         </div>
 
         {/* Mockup */}

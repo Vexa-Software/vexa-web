@@ -6,6 +6,7 @@ import {
   fadeInUp,
   staggerContainer,
 } from "../config/motion.config";
+import CustomButton17 from "../components/buttons/CustomButton17";
 
 import { ServiciosVexa } from "./ServiciosVexa";
 import { Herramientas } from "./Herramientas";
@@ -19,7 +20,7 @@ const Home = () => {
         {/* Video background */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          src="/videos/video1.mp4"
+          src="/videos/vexalogo.webm"
           autoPlay
           muted
           loop
@@ -27,7 +28,7 @@ const Home = () => {
         />
 
         {/* Overlay negro */}
-        <div className="absolute inset-0 bg-black/50 z-10" />
+        <div className="absolute inset-0 bg-black/65 z-10" />
 
         {/* Contenido centrado */}
         <div className="relative z-20 flex items-center justify-center h-full px-6">
@@ -57,18 +58,30 @@ const Home = () => {
               variants={fadeInUp}
               className="mt-6 flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a
-                href="#servicios"
-                className="bg-emerald-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-emerald-500 transition"
-              >
-                Nuestros Servicios
-              </a>
-              <a
-                href="#proyectos"
-                className="border border-white bg-white text-emerald-400 px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition"
-              >
-                Ver Proyectos
-              </a>
+              <CustomButton17
+                text="Nuestros servicios"
+                bgColor="transparent"
+                textColor="#10b981"
+                borderColor="#10b981"
+                hoverBgColor="#10b981"
+                hoverTextColor="text-black"
+                hoverBorderColor="#10b981"
+              />
+
+
+              <CustomButton17
+                text="Ver Proyectos"
+                bgColor="#262626"
+                textColor="#10b981"
+                borderColor="none"
+                hoverBgColor="#10b981"
+                hoverTextColor="text-black"
+                hoverBorderColor="none"
+              />
+              
+
+
+
             </motion.div>
           </motion.div>
         </div>
@@ -77,7 +90,7 @@ const Home = () => {
       <ServiciosVexa />
       <Herramientas />
       <Proyectos />
-      <SobreNosotros/>
+      <SobreNosotros />
     </>
   );
 };
